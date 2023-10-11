@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    background-color: #319190;
+    padding: 16px;
+    color: #fff;
+    display: flex;
+    border-bottom: 16px solid #1f5e5d;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button {
+    margin-left: 16px;
+    padding: 0 16px;
+}
+
+form {
+    background-color: #8da3a3;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+form h2 {
+    margin-bottom: 16px;
+}
+
+input, button {
+    padding: 4px 16px;
+}
+
+button {
+    background-color: #67b6b5;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#btcancel {
+    background-color: #813029;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap; /* Para criar nova linha ao preencher toda a tela */
+}
+
+ul li {
+    max-width: 25%; /* Largura maxima dos itens */
+    list-style: none; /* para remover pontinho da lista da tag li */
+    position: relative; /* para deixar a div .overlay-imagem-link sob a imagem */
+    max-height: 280px; /* Altura do <li>(imagem+link+div) neste caso a imagem ficou vazada pra baixo */
+    overflow-y: hidden; /* para corrigir a imagem vazada pra baixo */
+}
+
+ul li img {
+    max-width: 100%;
+    width: 340px;
+    height: 220px;
+    padding: 2px;
+}
+
+.overlay-imagem-link {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    opacity: 0; /* Opacidade 0 de uma escala de 0, 0.1, 0.2, 0.3 ... 0.8 ,0.9, 1 */
+    transition: all ease 0.5s;
+}
+
+.overlay-imagem-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:hover .overlay-imagem-link {
+    opacity: 0.7;
+}
